@@ -5,7 +5,7 @@
 }
 
 .background {
-    background-color: bisque;
+    background-color: white;
 }
 li, a, .btn {
     font-family:fantasy;
@@ -26,7 +26,7 @@ header {
     justify-content: space-between;
     z-index: 100;
     margin-right: 10rem;
-    background-color:bisque;
+    background-color:white;
     
 }
 
@@ -36,7 +36,7 @@ img {
     height: auto;
     aspect-ratio: 4/3;
     object-fit: contain;
-    mix-blend-mode:color-burn;
+   
     margin-left: 5rem;
     padding-right: 10%;
 }
@@ -96,6 +96,7 @@ body {
     margin-left: 450px;
     text-align: center;
     margin-top: 25%;
+    margin-left: 40%;
 }
 
 .home-content h1 {
@@ -147,7 +148,7 @@ body {
     align-items: center;
     justify-content: center;
     margin: 0;
-    background-color: bisque; 
+    background-color: white; 
 }
 
 
@@ -160,12 +161,14 @@ body {
 .popup-info {
     width: 300px;
     padding: 20px;
-    background-color: #fff; 
+    background-color: bisque; 
     border: 1px solid #ccc;
     border-radius: 4px;
     opacity: 0;
     pointer-events: none;
     transition: .3s ease;
+    margin-left: 40%;
+    margin-top: 20%;
     
 }
 
@@ -240,9 +243,9 @@ main{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: bisque;
+    background-color: white;
     background: url('../assets/background_image.jpg');
-    background-color:bisque;
+    background-color:white;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
