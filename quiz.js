@@ -1,69 +1,73 @@
-// const questions = [
-//     {
-//         question: "Who is the author of the novel 'To Kill a Mockingbird?'",
-//         optionA: "Harper Lee",
-//         optionB: "J.D. Salinger",
-//         optionC: "F. Scott Fitzgerald",
-//         optionD: "Mark Twain",
-//         correctOption: "optionA"
-//     },
-//     {
-//         question: "What is the chemical symbol for the element oxygen?",
-//         optionA: "O",
-//         optionB: "0c",
-//         optionC: "Om",
-//         optionD: "Ox",
-//         correctOption: "optionA"
-//     }
-// ];
+const questions = [
+    {
+        question: "Who is the author of the novel 'To Kill a Mockingbird?'",
+        optionA: "Harper Lee",
+        optionB: "J.D. Salinger",
+        optionC: "F. Scott Fitzgerald",
+        optionD: "Mark Twain",
+        correctOption: "optionA"
+},
+]
+[
+    {
+        question: "What is the chemical symbol for the element oxygen?",
+        optionA: "O",
+        optionB: "0c",
+        optionC: "Om",
+        optionD: "Ox",
+        correctOption: "optionA"
+    }
+];
 
-// let shuffledQuestions = [];
-// let questionNumber = 1;
-// let playerScore = 0;
-// let wrongAttempt = 0;
-// let indexNumber = 0;
+let shuffledQuestions = [];
+let questionNumber = 1;
+let playerScore = 0;
+let wrongAttempt = 0;
+let indexNumber = 0;
 
-// function handleQuestions() {
-//     while (shuffledQuestions.length <= 9) {
-//         const random = questions[Math.floor(Math.random() * questions.length)];
-//         if (!shuffledQuestions.includes(random)) {
-//             shuffledQuestions.push(random);
-//         }
-//     }
-// }
+function handleQuestions() {
+    while (shuffledQuestions.length <= 9) {
+        const random = questions[Math.floor(Math.random() * questions.length)];
+        if (!shuffledQuestions.includes(random)) {
+            shuffledQuestions.push(random);
+        }
+    }
+}
 
-// function NextQuestion(index) {
-//     handleQuestions();
-//     const currentQuestion = shuffledQuestions[index];
-//     document.getElementById("question-number").innerHTML = questionNumber;
-//     document.getElementById("player-score").innerHTML = playerScore;
-//     document.getElementById("display-question").innerHTML = currentQuestion.question;
-//     document.getElementById("option-one-label").innerHTML = currentQuestion.optionA;
-//     document.getElementById("option-two-label").innerHTML = currentQuestion.optionB;
-//     document.getElementById("option-three-label").innerHTML = currentQuestion.optionC;
-//     document.getElementById("option-four-label").innerHTML = currentQuestion.optionD;
-// }
+function NextQuestion(index) {
+    handleQuestions();
+    const currentQuestion = shuffledQuestions[index];
+    document.getElementById("question-number").innerHTML = questionNumber;
+    document.getElementById("player-score").innerHTML = playerScore;
+    document.getElementById("display-question").innerHTML = currentQuestion.question;
+    document.getElementById("option-one-label").innerHTML = currentQuestion.optionA;
+    document.getElementById("option-two-label").innerHTML = currentQuestion.optionB;
+    document.getElementById("option-three-label").innerHTML = currentQuestion.optionC;
+    document.getElementById("option-four-label").innerHTML = currentQuestion.optionD;
+}
 
-// function checkForAnswer() {
-//     const currentQuestion = shuffledQuestions[indexNumber];
-//     const currentQuestionAnswer = currentQuestion.correctOption;
-//     const options = document.getElementsByName("option");
-//     let correctOption = null;
+function checkForAnswer() {
+    const currentQuestion = shuffledQuestions[indexNumber];
+    const currentQuestionAnswer = currentQuestion.correctOption;
+    const options = document.getElementsByName("option");
+    let correctOption = null;
 
-//     options.forEach((option) => {
-//         if (option.value === currentQuestionAnswer) {
-//             correctOption = option.id;
-//         }
-//     });
+    options.forEach((option) => {
+        if (option.value === currentQuestionAnswer) {
+            correctOption = option.id;
+        }
+    });
+}
 
-//     if (
-//         !options[0].checked &&
-//         !options[1].checked &&
-//         !options[2].checked &&
-//         !options[3].checked
-//     ) {
-//         document.getElementById("option-modal").style.display = "flex";
-//     }
+    if (
+        !options[0].checked &&
+        !options[1].checked &&
+        !options[2].checked &&
+        !options[3].checked && 
+    )
+        {
+        document.getElementById("option-modal").style.display = "flex";
+    }
 
 //     options.forEach((option) => {
 //         if (option.checked && option.value === currentQuestionAnswer) {
